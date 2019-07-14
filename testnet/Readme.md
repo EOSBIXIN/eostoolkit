@@ -13,10 +13,10 @@ sudo docker-compose up -d
 ### 3.进入nodeosd Docker 并进行相应初始化
 ```
 sudo docker-compose exec nodeosd bash
-alias cleos='cleos -u http://localhost:$NODEOSPORT --wallet-url http://localhost:$WALLETPORT'
+alias cleos='cleos -u http://localhost:$NODSYSPORT --wallet-url http://localhost:$WALLETPORT'
 ```
 *也可以将 cleos 的 alias 添加到 /root/.bashrc 中，避免每次进入docker bash都要执行*
-*NODEOSPORT、WALLETPORT 是docker-compose.yml中声明的环境变量*
+*NODSYSPORT、WALLETPORT 是docker-compose.yml中声明的环境变量*
 
 ### 4.创建钱包并导入默认创建的eosio账户的 producer key (config.ini文件中)
 ```
