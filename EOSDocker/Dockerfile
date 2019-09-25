@@ -15,7 +15,8 @@ RUN apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get -y install openssl ca-certificates \ 
                                                         vim net-tools lsof wget curl supervisor \
                                                         libusb-1.0-0-dev curl libcurl4-gnutls-dev \
-    && rm -rf /var/lib/apt/lists/*
+    && rm -rf /var/lib/apt/lists/* \
+    && mkdir -p /opt/eosio/
 COPY --from=builder /usr/local/lib/* /usr/local/lib/
 COPY --from=builder /eos/build/bin /opt/eosio/bin
 
