@@ -1,0 +1,7 @@
+{
+  "shutdown-timeout": 100,
+  "log-opts": {
+    "max-size": "200m",
+    "max-file": "3"
+  }
+}
